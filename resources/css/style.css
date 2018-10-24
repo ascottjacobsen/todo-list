@@ -247,13 +247,13 @@ ul#completed {
 
 }
 
-ul.todo#completed:not(:empty) {
+ul.todo#completed {
   position: relative;
   padding: 60px 0 0 0;
 }
 
-ul.todo#completed:not(:empty):before {
-  content: "";
+ul.todo#completed:before {
+  content:'';
   width: 150px;
   height: 1px;
   background: #d8e5e0;
@@ -265,4 +265,23 @@ ul.todo#completed:not(:empty):before {
 
 #removed {
   display: none;
+}
+
+ul.todo#todo:empty:after {
+  content: "You have nothing to-do!";
+  margin: 15px 0 0 0;
+}
+
+ul.todo#completed:empty:after {
+  content: "You have yet to complete any tasks.";
+}
+
+
+ul.todo#todo:after,
+ul.todo#completed:after {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
 }

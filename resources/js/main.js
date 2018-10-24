@@ -56,7 +56,7 @@ function completeItem() {
 //adds new item to the ToDo list
 function addItemTodo(text) {
   console.log('working...')
-  counter = counter + 1;
+  counter = counter + (1*1000) ;
 
   var list = document.getElementById('todo');
 
